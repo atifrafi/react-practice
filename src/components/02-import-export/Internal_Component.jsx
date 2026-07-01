@@ -21,3 +21,5 @@ export function ProfileData (){
 }
 
 
+// varibale export
+export const blue = 'dolphin'
