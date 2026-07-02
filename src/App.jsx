@@ -2,12 +2,16 @@ import User from "./components/01-component/User";
 import Profile from "./components/02-import-export/Internal_Component";
 import { ProfileData , blue} from "./components/02-import-export/Internal_Component";
 import Card from './components/03-jsx/Card'
+import Event from "./components/04-event-functions/Event";
 
 const App = () => {
   return (
     <>
+      {/* for event and function */}
+      <Event/>
+
       {/* for jsx */}
-      <Card/>
+      {/* <Card/> */}
 
     {/* for import export */}
       {/* <Profile/>
