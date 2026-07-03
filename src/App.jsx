@@ -1,3 +1,4 @@
+import { useState } from "react";
 import User from "./components/01-component/User";
 import Profile from "./components/02-import-export/Internal_Component";
 import { ProfileData , blue} from "./components/02-import-export/Internal_Component";
@@ -6,15 +7,38 @@ import Event from "./components/04-event-functions/Event";
 import State from "./components/05-state/State";
 import Toggle from "./components/05-state/Toggle";
 import DataPassing from "./components/06-props/DataPassing";
+import DefaultProps from "./components/07-advance-props/DefaultProps";
+import JsxPassAsProps from "./components/07-advance-props/Jsx-Pass-As-Props";
+import OnclickEventAsProps from "./components/07-advance-props/OnclickEventAsProps";
 
 const App = () => {
+  const [hobby, setHobby] = useState();
+
   const name = 'atif';
   const age = 26;
   const hobbies = {cars: 'nissan', type: 'petrol' }
   return (
     <>
+      {/* for advance props */}
+      {/* default props */}
+      {/* <DefaultProps name='amir'/> */}
+      {/* pass jsx as a props */}
+      {/* <JsxPassAsProps name="abc">
+          <div>
+            <h1>hello</h1>
+            <h2>jsx passing</h2>
+            <h2>as a props</h2>
+          </div>
+      </JsxPassAsProps> */}
+      {/* onclick event as props */}
+      {hobby && <OnclickEventAsProps hobby={hobby}/>}
+      <button onClick={()=>setHobby('circket')}>show hobby</button>
+      <button onClick={()=>setHobby()}>hide hobby</button>
+
+
+
       {/* for props */}
-      <DataPassing name={name} age={age} hobbies={hobbies}/>
+      {/* <DataPassing name={name} age={age} hobbies={hobbies}/> */}
 
 
       {/* for useState hook*/}
