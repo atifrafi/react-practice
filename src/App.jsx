@@ -10,6 +10,7 @@ import DataPassing from "./components/06-props/DataPassing";
 import DefaultProps from "./components/07-advance-props/DefaultProps";
 import JsxPassAsProps from "./components/07-advance-props/Jsx-Pass-As-Props";
 import OnclickEventAsProps from "./components/07-advance-props/OnclickEventAsProps";
+import Input from "./components/08-onchange-event/Input";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -19,6 +20,10 @@ const App = () => {
   const hobbies = {cars: 'nissan', type: 'petrol' }
   return (
     <>
+      {/* for onchange event */}
+      <Input/>
+
+
       {/* for advance props */}
       {/* default props */}
       {/* <DefaultProps name='amir'/> */}
@@ -31,9 +36,9 @@ const App = () => {
           </div>
       </JsxPassAsProps> */}
       {/* onclick event as props */}
-      {hobby && <OnclickEventAsProps hobby={hobby}/>}
+      {/* {hobby && <OnclickEventAsProps hobby={hobby}/>}
       <button onClick={()=>setHobby('circket')}>show hobby</button>
-      <button onClick={()=>setHobby()}>hide hobby</button>
+      <button onClick={()=>setHobby()}>hide hobby</button> */}
 
 
 
