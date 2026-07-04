@@ -12,6 +12,8 @@ import JsxPassAsProps from "./components/07-advance-props/Jsx-Pass-As-Props";
 import OnclickEventAsProps from "./components/07-advance-props/OnclickEventAsProps";
 import Input from "./components/08-onchange-event/Input";
 import Form from "./components/09-controlled-component/Form"
+import UForm from "./components/10-uncontrolled-component/UForm"
+
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -21,8 +23,13 @@ const App = () => {
   const hobbies = {cars: 'nissan', type: 'petrol' }
   return (
     <>
+      
+
+      {/* for uncontrolled component */}
+      {/* <UForm/> */}
+
       {/* for Controlled component */}
-      <Form/>
+      {/* <Form/> */}
 
 
       {/* for onchange event */}
