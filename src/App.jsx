@@ -14,6 +14,7 @@ import Input from "./components/08-onchange-event/Input";
 import Form from "./components/09-controlled-component/Form"
 import UForm from "./components/10-uncontrolled-component/UForm"
 import CheckBox from "./components/11-checkbox/CheckBox";
+import RadioAndDropdown from "./components/radio-selectdropdown/RadioAndDropdown";
 
 
 const App = () => {
@@ -24,8 +25,11 @@ const App = () => {
   const hobbies = {cars: 'nissan', type: 'petrol' }
   return (
     <>
+    {/* for radion and select in react */}
+      {/* <RadioAndDropdown/> */}
+
       {/* for checkbox */}
-      <CheckBox/>
+      {/* <CheckBox/> */}
 
       {/* for uncontrolled component */}
       {/* <UForm/> */}
