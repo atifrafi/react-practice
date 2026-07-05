@@ -16,6 +16,8 @@ import UForm from "./components/10-uncontrolled-component/UForm"
 import CheckBox from "./components/11-checkbox/CheckBox";
 import RadioAndDropdown from "./components/12-radio-selectdropdown/RadioAndDropdown";
 import ForLoop from "./components/13-loops-react/ForLoop";
+import MapLoop from "./components/13-loops-react/MapLoop";
+import FilterAnMap from "./components/13-loops-react/FilterAnMap";
 
 
 const App = () => {
@@ -27,8 +29,12 @@ const App = () => {
   return (
     <>
     {/* loop in react */}
+    {/* filter + map combine use for loop */}
+    <FilterAnMap/>
+    {/* map method for loop */}
+    {/* <MapLoop/> */}
     {/* for loop */}
-    <ForLoop/>
+    {/* <ForLoop/> */}
 
     {/* for radion and select in react */}
       {/* <RadioAndDropdown/> */}
