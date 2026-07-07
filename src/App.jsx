@@ -18,6 +18,8 @@ import RadioAndDropdown from "./components/12-radio-selectdropdown/RadioAndDropd
 import ForLoop from "./components/13-loops-react/ForLoop";
 import MapLoop from "./components/13-loops-react/MapLoop";
 import FilterAnMap from "./components/13-loops-react/FilterAnMap";
+import ComplexLogic from "./components/13-loops-react/ComplexLogic";
+import UseEffect from "./components/14-useeffect/UseEffect";
 
 
 const App = () => {
@@ -26,11 +28,21 @@ const App = () => {
   const name = 'atif';
   const age = 26;
   const hobbies = {cars: 'nissan', type: 'petrol' }
+  const hobby2 = ['task1','task2','task3','task4',]
   return (
     <>
-    {/* loop in react */}
+    {/* for useEffect */}
+    <UseEffect/>
+
+    {/* loop in react */} 
+    {/* for complex logic, use a helper function ya new component to return jsx */}
+      {/* {
+      hobby2.map((item,index)=>
+        <ComplexLogic key={index} elem={item} indx={index}/>
+      )
+      } */}
     {/* filter + map combine use for loop */}
-    <FilterAnMap/>
+    {/* <FilterAnMap/> */}
     {/* map method for loop */}
     {/* <MapLoop/> */}
     {/* for loop */}
