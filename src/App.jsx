@@ -20,6 +20,7 @@ import MapLoop from "./components/13-loops-react/MapLoop";
 import FilterAnMap from "./components/13-loops-react/FilterAnMap";
 import ComplexLogic from "./components/13-loops-react/ComplexLogic";
 import UseEffect from "./components/14-useeffect/UseEffect";
+import Quote from "./components/15-inline-style/Quote";
 
 
 const App = () => {
@@ -31,8 +32,11 @@ const App = () => {
   const hobby2 = ['task1','task2','task3','task4',]
   return (
     <>
+    {/* for inline css */}
+    <Quote/>
+
     {/* for useEffect */}
-    <UseEffect/>
+    {/* <UseEffect/> */}
 
     {/* loop in react */} 
     {/* for complex logic, use a helper function ya new component to return jsx */}
