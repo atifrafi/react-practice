@@ -21,6 +21,7 @@ import FilterAnMap from "./components/13-loops-react/FilterAnMap";
 import ComplexLogic from "./components/13-loops-react/ComplexLogic";
 import UseEffect from "./components/14-useeffect/UseEffect";
 import Quote from "./components/15-inline-style/Quote";
+import Heading from "./components/16-external-style/Heading";
 
 
 const App = () => {
@@ -32,8 +33,11 @@ const App = () => {
   const hobby2 = ['task1','task2','task3','task4',]
   return (
     <>
+    {/* for external css */}
+    <Heading/>
+
     {/* for inline css */}
-    <Quote/>
+    {/* <Quote/> */}
 
     {/* for useEffect */}
     {/* <UseEffect/> */}
