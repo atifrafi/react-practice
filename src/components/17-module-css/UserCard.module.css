@@ -1,0 +1,22 @@
+.cardBox{
+    margin: auto;
+    padding: 28px;
+    border: 2px solid;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.cardHeading{
+    font-size: 22px;
+}
+
+.cardDescription{
+    font-size: 14px;
+}
+
+.cardButton{
+    padding: 8px;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+}

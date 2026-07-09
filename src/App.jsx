@@ -22,6 +22,8 @@ import ComplexLogic from "./components/13-loops-react/ComplexLogic";
 import UseEffect from "./components/14-useeffect/UseEffect";
 import Quote from "./components/15-inline-style/Quote";
 import Heading from "./components/16-external-style/Heading";
+import UserCard from "./components/17-module-css/UserCard";
+import TextCom from "./components/18-styled-component-library/Text";
 
 
 const App = () => {
@@ -33,8 +35,16 @@ const App = () => {
   const hobby2 = ['task1','task2','task3','task4',]
   return (
     <>
+    {/* for styled component lib */}
+    <TextCom/>
+
+    {/* for module css */}
+    {/* <UserCard uname='atif'/>
+    <UserCard uname='asif'/>
+    <UserCard uname='amir'/> */}
+
     {/* for external css */}
-    <Heading/>
+    {/* <Heading/> */}
 
     {/* for inline css */}
     {/* <Quote/> */}
