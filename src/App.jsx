@@ -25,6 +25,7 @@ import Heading from "./components/16-external-style/Heading";
 import UserCard from "./components/17-module-css/UserCard";
 import TextCom from "./components/18-styled-component-library/Text";
 import BootsrtapButton from "./components/19-bootstrap/Button";
+import CardT from "./components/20-tailwind-css/CardT";
 
 
 const App = () => {
@@ -36,8 +37,11 @@ const App = () => {
   const hobby2 = ['task1','task2','task3','task4',]
   return (
     <>
+    {/* for tailwind css */}
+    <CardT/>
+
     {/* for bootstrap */}
-    <BootsrtapButton/>
+    {/* <BootsrtapButton/> */}
 
     {/* for styled component lib */}
     {/* <TextCom/> */}
