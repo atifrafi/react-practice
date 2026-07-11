@@ -26,6 +26,8 @@ import UserCard from "./components/17-module-css/UserCard";
 import TextCom from "./components/18-styled-component-library/Text";
 import BootsrtapButton from "./components/19-bootstrap/Button";
 import CardT from "./components/20-tailwind-css/CardT";
+import MuiComponent from "./components/21-material-ui/MuiComponent";
+import ChildComp from "./components/22-function as props/ChildComp";
 
 
 const App = () => {
@@ -35,10 +37,25 @@ const App = () => {
   const age = 26;
   const hobbies = {cars: 'nissan', type: 'petrol' }
   const hobby2 = ['task1','task2','task3','task4',]
+
+  // function as props 
+  const handleName = (name)=>{
+    alert(`${name} subscribe`)
+  }
   return (
     <>
+    {/* for function as props */}
+    <ChildComp handleName={handleName} name='atif'/>
+    <ChildComp handleName={handleName} name='asif'/>
+    <ChildComp handleName={handleName} name='jake'/>
+    <ChildComp handleName={handleName} name='owais'/>
+
+
+    {/* for material UI library */}
+    {/* <MuiComponent/> */}
+
     {/* for tailwind css */}
-    <CardT/>
+    {/* <CardT/> */}
 
     {/* for bootstrap */}
     {/* <BootsrtapButton/> */}
