@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import User from "./components/01-component/User";
 import Profile from "./components/02-import-export/Internal_Component";
 import { ProfileData , blue} from "./components/02-import-export/Internal_Component";
@@ -28,7 +28,7 @@ import BootsrtapButton from "./components/19-bootstrap/Button";
 import CardT from "./components/20-tailwind-css/CardT";
 import MuiComponent from "./components/21-material-ui/MuiComponent";
 import ChildComp from "./components/22-function as props/ChildComp";
-
+import UserRef from './components/23-forwardRef/User'
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -42,9 +42,23 @@ const App = () => {
   const handleName = (name)=>{
     alert(`${name} subscribe`)
   }
+
+  // forward ref 
+  const inputRef = useRef()
+
+  const handleFocus = ()=>{
+        console.log(inputRef)
+        inputRef.current.focus()
+        inputRef.current.style.backgroundColor = "yellow"
+    }
+
   return (
     <>
     {/* forward ref */}
+    <UserRef reff={inputRef} />
+    <button style={{backgroundColor:'yellow'}} onClick={handleFocus}>focus</button>
+
+    
 
     {/* for function as props */}
     {/* <ChildComp handleName={handleName} name='atif'/>
