@@ -44,11 +44,13 @@ const App = () => {
   }
   return (
     <>
+    {/* forward ref */}
+
     {/* for function as props */}
-    <ChildComp handleName={handleName} name='atif'/>
+    {/* <ChildComp handleName={handleName} name='atif'/>
     <ChildComp handleName={handleName} name='asif'/>
     <ChildComp handleName={handleName} name='jake'/>
-    <ChildComp handleName={handleName} name='owais'/>
+    <ChildComp handleName={handleName} name='owais'/> */}
 
 
     {/* for material UI library */}
