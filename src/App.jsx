@@ -30,6 +30,7 @@ import MuiComponent from "./components/21-material-ui/MuiComponent";
 import ChildComp from "./components/22-function as props/ChildComp";
 import UserRef from './components/23-forwardRef/User'
 import SubmitBtn from "./components/24-useFormstatus/SubmitBtn";
+import Loader from "./components/25-usetransistion hook/Loader";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -61,10 +62,13 @@ const App = () => {
   
   return (
     <>
+    {/* for use transistion hook */}
+    <Loader/>
+
     {/* for useFormstatus */}
-    <form action={handleAction}>
+    {/* <form action={handleAction}>
       <SubmitBtn/>
-    </form>
+    </form> */}
     
 
 
