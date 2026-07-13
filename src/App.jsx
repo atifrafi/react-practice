@@ -29,6 +29,7 @@ import CardT from "./components/20-tailwind-css/CardT";
 import MuiComponent from "./components/21-material-ui/MuiComponent";
 import ChildComp from "./components/22-function as props/ChildComp";
 import UserRef from './components/23-forwardRef/User'
+import SubmitBtn from "./components/24-useFormstatus/SubmitBtn";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -52,11 +53,24 @@ const App = () => {
         inputRef.current.style.backgroundColor = "yellow"
     }
 
+  // use formstatus hook
+   const handleAction = async ()=>{
+     await new Promise((resolve) => setTimeout(resolve,2000));
+     console.log('form submitted')
+  }
+  
   return (
     <>
+    {/* for useFormstatus */}
+    <form action={handleAction}>
+      <SubmitBtn/>
+    </form>
+    
+
+
     {/* forward ref */}
-    <UserRef reff={inputRef} />
-    <button style={{backgroundColor:'yellow'}} onClick={handleFocus}>focus</button>
+    {/* <UserRef reff={inputRef} />
+    <button style={{backgroundColor:'yellow'}} onClick={handleFocus}>focus</button> */}
 
     
 
