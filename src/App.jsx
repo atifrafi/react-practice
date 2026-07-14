@@ -31,6 +31,7 @@ import ChildComp from "./components/22-function as props/ChildComp";
 import UserRef from './components/23-forwardRef/User'
 import SubmitBtn from "./components/24-useFormstatus/SubmitBtn";
 import Loader from "./components/25-usetransistion hook/Loader";
+import ParentCom from "./components/26-react memo/ParentCom";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -62,8 +63,11 @@ const App = () => {
   
   return (
     <>
+    {/* for react memo */}
+    <ParentCom/>
+
     {/* for use transistion hook */}
-    <Loader/>
+    {/* <Loader/> */}
 
     {/* for useFormstatus */}
     {/* <form action={handleAction}>
