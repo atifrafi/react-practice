@@ -33,6 +33,7 @@ import SubmitBtn from "./components/24-useFormstatus/SubmitBtn";
 import Loader from "./components/25-usetransistion hook/Loader";
 import ParentCom from "./components/26-react memo/ParentCom";
 import Memo from "./components/27-use memo hook/Memo";
+import UpdateArr from "./components/28-updation array in state/UpdateArr";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -64,8 +65,11 @@ const App = () => {
   
   return (
     <>
+    {/* for update array in state */}
+    <UpdateArr/>
+
     {/* for use memo hook */}
-    <Memo/>
+    {/* <Memo/> */}
 
     {/* for react memo */}
     {/* <ParentCom/> */}

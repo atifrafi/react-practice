@@ -5,6 +5,7 @@
 // jis se performance kharab hoti hai 
 // islia us heavycalcultaion pr usememo hook use krta hai 
 // ya heavy calcultion unnecisery render nhi hoga jab tak number state na change ho
+// ya expensive value pr lagaya jata hai
 
 import { useMemo, useState } from "react";
 
