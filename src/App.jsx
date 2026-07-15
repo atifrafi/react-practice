@@ -34,6 +34,7 @@ import Loader from "./components/25-usetransistion hook/Loader";
 import ParentCom from "./components/26-react memo/ParentCom";
 import Memo from "./components/27-use memo hook/Memo";
 import UpdateArr from "./components/28-updation array in state/UpdateArr";
+import ObjUpd from "./components/29-updation object in state/ObjUpd";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -65,8 +66,13 @@ const App = () => {
   
   return (
     <>
+    
+
+    {/* for update object in state */}
+    {/* <ObjUpd/> */}
+
     {/* for update array in state */}
-    <UpdateArr/>
+    {/* <UpdateArr/> */}
 
     {/* for use memo hook */}
     {/* <Memo/> */}
