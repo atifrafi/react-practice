@@ -40,6 +40,7 @@ import UpdateArr from "./components/28-updation array in state/UpdateArr";
 import ObjUpd from "./components/29-updation object in state/ObjUpd";
 import Header from "./components/30-props children/Header";
 import Layout from "./components/30-props children/Layout";
+import ParentCompo from "./components/31-state lifting/ParentCom";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -71,9 +72,12 @@ const App = () => {
 
   return (
     <>
+      {/* for state lifting */}
+      <ParentCompo/>
+
       {/* for props.children */}
       {/* note props.children nested component mein ziyad use hota hai */}
-      <Header name='bmw'>
+      {/* <Header name='bmw'>
         <h2>heading two</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
@@ -81,7 +85,7 @@ const App = () => {
           obcaecati ipsum dolor! A, quo dolores using props.children
         </p>
         <Layout><p>hello layout</p></Layout>
-      </Header>
+      </Header> */}
 
       {/* for update object in state */}
       {/* <ObjUpd/> */}
