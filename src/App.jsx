@@ -1,8 +1,11 @@
 import { useRef, useState } from "react";
 import User from "./components/01-component/User";
 import Profile from "./components/02-import-export/Internal_Component";
-import { ProfileData , blue} from "./components/02-import-export/Internal_Component";
-import Card from './components/03-jsx/Card'
+import {
+  ProfileData,
+  blue,
+} from "./components/02-import-export/Internal_Component";
+import Card from "./components/03-jsx/Card";
 import Event from "./components/04-event-functions/Event";
 import State from "./components/05-state/State";
 import Toggle from "./components/05-state/Toggle";
@@ -11,8 +14,8 @@ import DefaultProps from "./components/07-advance-props/DefaultProps";
 import JsxPassAsProps from "./components/07-advance-props/Jsx-Pass-As-Props";
 import OnclickEventAsProps from "./components/07-advance-props/OnclickEventAsProps";
 import Input from "./components/08-onchange-event/Input";
-import Form from "./components/09-controlled-component/Form"
-import UForm from "./components/10-uncontrolled-component/UForm"
+import Form from "./components/09-controlled-component/Form";
+import UForm from "./components/10-uncontrolled-component/UForm";
 import CheckBox from "./components/11-checkbox/CheckBox";
 import RadioAndDropdown from "./components/12-radio-selectdropdown/RadioAndDropdown";
 import ForLoop from "./components/13-loops-react/ForLoop";
@@ -28,122 +31,129 @@ import BootsrtapButton from "./components/19-bootstrap/Button";
 import CardT from "./components/20-tailwind-css/CardT";
 import MuiComponent from "./components/21-material-ui/MuiComponent";
 import ChildComp from "./components/22-function as props/ChildComp";
-import UserRef from './components/23-forwardRef/User'
+import UserRef from "./components/23-forwardRef/User";
 import SubmitBtn from "./components/24-useFormstatus/SubmitBtn";
 import Loader from "./components/25-usetransistion hook/Loader";
 import ParentCom from "./components/26-react memo/ParentCom";
 import Memo from "./components/27-use memo hook/Memo";
 import UpdateArr from "./components/28-updation array in state/UpdateArr";
 import ObjUpd from "./components/29-updation object in state/ObjUpd";
+import Header from "./components/30-props children/Header";
+import Layout from "./components/30-props children/Layout";
 
 const App = () => {
   const [hobby, setHobby] = useState();
 
-  const name = 'atif';
+  const name = "atif";
   const age = 26;
-  const hobbies = {cars: 'nissan', type: 'petrol' }
-  const hobby2 = ['task1','task2','task3','task4',]
+  const hobbies = { cars: "nissan", type: "petrol" };
+  const hobby2 = ["task1", "task2", "task3", "task4"];
 
-  // function as props 
-  const handleName = (name)=>{
-    alert(`${name} subscribe`)
-  }
+  // function as props
+  const handleName = (name) => {
+    alert(`${name} subscribe`);
+  };
 
-  // forward ref 
-  const inputRef = useRef()
+  // forward ref
+  const inputRef = useRef();
 
-  const handleFocus = ()=>{
-        console.log(inputRef)
-        inputRef.current.focus()
-        inputRef.current.style.backgroundColor = "yellow"
-    }
+  const handleFocus = () => {
+    console.log(inputRef);
+    inputRef.current.focus();
+    inputRef.current.style.backgroundColor = "yellow";
+  };
 
   // use formstatus hook
-   const handleAction = async ()=>{
-     await new Promise((resolve) => setTimeout(resolve,2000));
-     console.log('form submitted')
-  }
-  
+  const handleAction = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log("form submitted");
+  };
+
   return (
     <>
-    
+      {/* for props.children */}
+      {/* note props.children nested component mein ziyad use hota hai */}
+      <Header name='bmw'>
+        <h2>heading two</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+          atque accusantium. Corporis deserunt non quod mollitia dolore quisquam
+          obcaecati ipsum dolor! A, quo dolores using props.children
+        </p>
+        <Layout><p>hello layout</p></Layout>
+      </Header>
 
-    {/* for update object in state */}
-    {/* <ObjUpd/> */}
+      {/* for update object in state */}
+      {/* <ObjUpd/> */}
 
-    {/* for update array in state */}
-    {/* <UpdateArr/> */}
+      {/* for update array in state */}
+      {/* <UpdateArr/> */}
 
-    {/* for use memo hook */}
-    {/* <Memo/> */}
+      {/* for use memo hook */}
+      {/* <Memo/> */}
 
-    {/* for react memo */}
-    {/* <ParentCom/> */}
+      {/* for react memo */}
+      {/* <ParentCom/> */}
 
-    {/* for use transistion hook */}
-    {/* <Loader/> */}
+      {/* for use transistion hook */}
+      {/* <Loader/> */}
 
-    {/* for useFormstatus */}
-    {/* <form action={handleAction}>
+      {/* for useFormstatus */}
+      {/* <form action={handleAction}>
       <SubmitBtn/>
     </form> */}
-    
 
-
-    {/* forward ref */}
-    {/* <UserRef reff={inputRef} />
+      {/* forward ref */}
+      {/* <UserRef reff={inputRef} />
     <button style={{backgroundColor:'yellow'}} onClick={handleFocus}>focus</button> */}
 
-    
-
-    {/* for function as props */}
-    {/* <ChildComp handleName={handleName} name='atif'/>
+      {/* for function as props */}
+      {/* <ChildComp handleName={handleName} name='atif'/>
     <ChildComp handleName={handleName} name='asif'/>
     <ChildComp handleName={handleName} name='jake'/>
     <ChildComp handleName={handleName} name='owais'/> */}
 
+      {/* for material UI library */}
+      {/* <MuiComponent/> */}
 
-    {/* for material UI library */}
-    {/* <MuiComponent/> */}
+      {/* for tailwind css */}
+      {/* <CardT/> */}
 
-    {/* for tailwind css */}
-    {/* <CardT/> */}
+      {/* for bootstrap */}
+      {/* <BootsrtapButton/> */}
 
-    {/* for bootstrap */}
-    {/* <BootsrtapButton/> */}
+      {/* for styled component lib */}
+      {/* <TextCom/> */}
 
-    {/* for styled component lib */}
-    {/* <TextCom/> */}
-
-    {/* for module css */}
-    {/* <UserCard uname='atif'/>
+      {/* for module css */}
+      {/* <UserCard uname='atif'/>
     <UserCard uname='asif'/>
     <UserCard uname='amir'/> */}
 
-    {/* for external css */}
-    {/* <Heading/> */}
+      {/* for external css */}
+      {/* <Heading/> */}
 
-    {/* for inline css */}
-    {/* <Quote/> */}
+      {/* for inline css */}
+      {/* <Quote/> */}
 
-    {/* for useEffect */}
-    {/* <UseEffect/> */}
+      {/* for useEffect */}
+      {/* <UseEffect/> */}
 
-    {/* loop in react */} 
-    {/* for complex logic, use a helper function ya new component to return jsx */}
+      {/* loop in react */}
+      {/* for complex logic, use a helper function ya new component to return jsx */}
       {/* {
       hobby2.map((item,index)=>
         <ComplexLogic key={index} elem={item} indx={index}/>
       )
       } */}
-    {/* filter + map combine use for loop */}
-    {/* <FilterAnMap/> */}
-    {/* map method for loop */}
-    {/* <MapLoop/> */}
-    {/* for loop */}
-    {/* <ForLoop/> */}
+      {/* filter + map combine use for loop */}
+      {/* <FilterAnMap/> */}
+      {/* map method for loop */}
+      {/* <MapLoop/> */}
+      {/* for loop */}
+      {/* <ForLoop/> */}
 
-    {/* for radion and select in react */}
+      {/* for radion and select in react */}
       {/* <RadioAndDropdown/> */}
 
       {/* for checkbox */}
@@ -155,10 +165,8 @@ const App = () => {
       {/* for Controlled component */}
       {/* <Form/> */}
 
-
       {/* for onchange event */}
       {/* <Input/> */}
-
 
       {/* for advance props */}
       {/* default props */}
@@ -176,11 +184,8 @@ const App = () => {
       <button onClick={()=>setHobby('circket')}>show hobby</button>
       <button onClick={()=>setHobby()}>hide hobby</button> */}
 
-
-
       {/* for props */}
       {/* <DataPassing name={name} age={age} hobbies={hobbies}/> */}
-
 
       {/* for useState hook*/}
       {/* <State/> */}
@@ -192,7 +197,7 @@ const App = () => {
       {/* for jsx */}
       {/* <Card/> */}
 
-    {/* for import export */}
+      {/* for import export */}
       {/* <Profile/>
       <ProfileData/>
       {blue} varibale hai */}
