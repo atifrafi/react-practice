@@ -41,6 +41,7 @@ import ObjUpd from "./components/29-updation object in state/ObjUpd";
 import Header from "./components/30-props children/Header";
 import Layout from "./components/30-props children/Layout";
 import ParentCompo from "./components/31-state lifting/ParentCom";
+import Derived from "./components/32-derived state/Derived";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -72,8 +73,11 @@ const App = () => {
 
   return (
     <>
+      {/* for derived state */}
+      <Derived quantity={20} price={10}/>
+
       {/* for state lifting */}
-      <ParentCompo/>
+      {/* <ParentCompo/> */}
 
       {/* for props.children */}
       {/* note props.children nested component mein ziyad use hota hai */}
