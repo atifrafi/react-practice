@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { Children, useRef, useState } from "react";
 import User from "./components/01-component/User";
 import Profile from "./components/02-import-export/Internal_Component";
 import {
@@ -38,10 +38,12 @@ import ParentCom from "./components/26-react memo/ParentCom";
 import Memo from "./components/27-use memo hook/Memo";
 import UpdateArr from "./components/28-updation array in state/UpdateArr";
 import ObjUpd from "./components/29-updation object in state/ObjUpd";
-import Header from "./components/30-props children/Header";
 import Layout from "./components/30-props children/Layout";
 import ParentCompo from "./components/31-state lifting/ParentCom";
 import Derived from "./components/32-derived state/Derived";
+import { UserContext } from "./components/33-context api/UserContext";
+import UserProfile from "./components/33-context api/UserProfile";
+import GuestProfile from "./components/33-context api/GuestProfile";
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -71,10 +73,36 @@ const App = () => {
     console.log("form submitted");
   };
 
+  // context api
+  // Parent component ki apni state
+  const [user, setUser] = useState("Atif");
   return (
     <>
+      {/* for context api */}
+      {/* Provider lagaya aur usme 'user' state daal di */}
+    <UserContext.Provider value={user}>
+      <div style={{ padding: "30px", fontFamily: "sans-serif" }}>
+        <h1>App Component (Parent)</h1>
+        
+        {/* Input box taake aap live state change karke dekh sakein */}
+        <input 
+          type="text" 
+          value={user} 
+          onChange={(e) => setUser(e.target.value)} 
+          placeholder="Type username here..."
+          style={{ padding: "8px", fontSize: "16px" }}
+        />
+
+        {/* Humne is component ko koi props nahi diye! */}
+        <UserProfile />
+        <GuestProfile/>
+        
+      </div>
+    </UserContext.Provider>
+
+
       {/* for derived state */}
-      <Derived quantity={20} price={10}/>
+      {/* <Derived quantity={20} price={10}/> */}
 
       {/* for state lifting */}
       {/* <ParentCompo/> */}
