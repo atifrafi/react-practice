@@ -46,6 +46,8 @@ import UserProfile from "./components/33-context api/UserProfile";
 import GuestProfile from "./components/33-context api/GuestProfile";
 import FormHandling from "./components/34-useActionState hook/FormHandling";
 import ID from "./components/35-useID hook/ID";
+import { Link, Outlet } from 'react-router'
+
 
 const App = () => {
   const [hobby, setHobby] = useState();
@@ -80,8 +82,23 @@ const App = () => {
   const [user, setUser] = useState("Atif");
   return (
     <>
+      {/* for react router */}
+      {/* creating routes */}
+      {/* in main.jsx */}
+      {/* show links using react router link */}
+      <nav>
+        {/* link bhi react router ka part hai ju page ko reload hona se rokta hai */}
+        <Link to='/'>Home</Link>
+         {" | "}
+        <Link to='/contact'>Contact</Link>
+        {/* outlet component ka andar ka show krta hai */}
+        <Outlet/>
+      </nav>
+
+
+
     {/* for use id hook */}
-    <ID/>
+    {/* <ID/> */}
 
 
       {/* for use action state hook */}
