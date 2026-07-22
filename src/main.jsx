@@ -5,6 +5,8 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './pages/Home.jsx'
 import ContactUs from './pages/ContactUs.jsx'
+import NotFound from './pages/NotFound.jsx'
+import RedirectPage from './pages/RedirectPage.jsx'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // createbrowserrouter 
@@ -12,9 +14,14 @@ import ContactUs from './pages/ContactUs.jsx'
 const router = createBrowserRouter([
   { path: "/",
     element: <App/>,
+    // error element mein 404 error page show karega
+    errorElement: <NotFound/>,
     children:[
       {path: "/", element: <Home/>},
       {path: "contact", element: <ContactUs/>},
+      // * ka matlab kisi bhi random path ju exist nhi krta
+      {path: "*", element: <NotFound/>},
+      {path: "home", element: <RedirectPage/>}
     ]
   }
 ])

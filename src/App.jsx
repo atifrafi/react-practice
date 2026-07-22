@@ -46,7 +46,7 @@ import UserProfile from "./components/33-context api/UserProfile";
 import GuestProfile from "./components/33-context api/GuestProfile";
 import FormHandling from "./components/34-useActionState hook/FormHandling";
 import ID from "./components/35-useID hook/ID";
-import { Link, Outlet } from 'react-router'
+import { Link, NavLink, Outlet } from 'react-router'
 
 
 const App = () => {
@@ -80,6 +80,15 @@ const App = () => {
   // context api
   // Parent component ki apni state
   const [user, setUser] = useState("Atif");
+
+  // nav link active link css
+  const navStyle = ({isActive})=>({
+    fontSize: '28px',
+    color: isActive ? 'orange' : 'black',
+    fontWeight: isActive ? 'bold':'normal',
+    textDecoration: 'none'
+  })
+  
   return (
     <>
       {/* for react router */}
@@ -88,11 +97,22 @@ const App = () => {
       {/* show links using react router link */}
       <nav>
         {/* link bhi react router ka part hai ju page ko reload hona se rokta hai */}
-        <Link to='/'>Home</Link>
-         {" | "}
-        <Link to='/contact'>Contact</Link>
+        {/* <Link to='/'>Home</Link> */}
+         {/* {" | "} */}
+        {/* <Link to='/contact'>Contact</Link> */}
         {/* outlet component ka andar ka show krta hai */}
+        {/* <Outlet/> */}
+
+        {/* nav link */}
+        {/* nav link or link se dono se route lagata hai */}
+        {/* lakin nav link ziyda bhetar ha isma istrue matlab boolean milta hai */}
+        {/* jis se active link laga sakta hai */}
+        <NavLink to='/' style={navStyle}>Home</NavLink>
+        {"  "}
+        <NavLink to='contact' style={navStyle}>Contact</NavLink>
         <Outlet/>
+        
+
       </nav>
 
 
