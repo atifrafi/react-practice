@@ -107,12 +107,14 @@ const App = () => {
         {/* nav link or link se dono se route lagata hai */}
         {/* lakin nav link ziyda bhetar ha isma istrue matlab boolean milta hai */}
         {/* jis se active link laga sakta hai */}
-        <NavLink to='/' style={navStyle}>Home</NavLink>
+        {/* <NavLink to='/' style={navStyle}>Home</NavLink>
         {"  "}
         <NavLink to='contact' style={navStyle}>Contact</NavLink>
-        <Outlet/>
+        <Outlet/> */}
         
-
+        {/* nested route */}
+        <h1>Welcome home</h1>
+        
       </nav>
 
 
